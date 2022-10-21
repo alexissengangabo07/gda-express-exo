@@ -8,10 +8,10 @@ const app = express();
 app.set('view engine', 'ejs');
 
 //Routes
-app.get('/', (req, res) => res.sendFile( path.resolve('./views/index.ejs') ));
+app.get('/', (req, res) => res.render( path.resolve('./views/index') ));
 
-app.get('/contact', (req, res) => res.sendFile( path.resolve('./views/contact.ejs')));
+app.get('/contact', (req, res) => res.render( path.resolve('./views/contact')));
 
-app.get('/about', (req, res) => res.sendFile( path.resolve('./views/about.ejs')));
+app.get('/about', (req, res) => res.render( path.resolve('./views/about')));
 
 app.listen(5050, () => console.log("Server started"));
