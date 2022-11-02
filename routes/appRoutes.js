@@ -1,11 +1,12 @@
 import express from "express";
+import { homeController, contactController, aboutController } from "../controllers/appController.js";
 
 const router = express.Router();
 
-router.get('/', (req, res) => res.render('index'));
+router.get('/', homeController);
 
-router.get('/contact', (req, res) => res.render('contact'));
+router.get('/contact', contactController);
 
-router.get('/about', (req, res) => res.render('about'));
+router.get('/about', aboutController);
 
 export default router;
